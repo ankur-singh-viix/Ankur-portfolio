@@ -1,0 +1,309 @@
+/* ================================================
+   SPIRITUAL PORTFOLIO — GLOBAL STYLES
+   ================================================ */
+
+/* ✏️ FONTS — Import from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@300;400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ================================================
+   CSS CUSTOM PROPERTIES (Design Tokens)
+   ✏️ Edit these to retheme the entire portfolio
+   ================================================ */
+:root {
+  /* Background layers */
+  --bg-void:      #03020d;
+  --bg-cosmos:    #07051a;
+  --bg-nebula:    #0d0a2b;
+  --bg-card:      rgba(255, 255, 255, 0.028);
+  --bg-card-hover:rgba(255, 255, 255, 0.055);
+
+  /* Border tokens */
+  --border-dim:   rgba(255, 255, 255, 0.07);
+  --border-gold:  rgba(245, 158, 11, 0.4);
+  --border-lotus: rgba(192, 132, 252, 0.35);
+
+  /* Sacred accent colors */
+  --gold:   #f59e0b;
+  --lotus:  #c084fc;
+  --aura:   #818cf8;
+  --ether:  #e0e7ff;
+
+  /* Text */
+  --text-primary:   #ffffff;
+  --text-secondary: #d6d3ff;
+  --text-muted:     #9f9cd8;
+
+  /* Fonts */
+  --font-display: 'Cinzel', serif;
+  --font-body:    'Crimson Text', serif;
+  --font-code:    'JetBrains Mono', monospace;
+
+  /* Glow shadows */
+  --glow-gold:  0 0 40px rgba(245,158,11,0.3),  0 0 80px rgba(245,158,11,0.12);
+  --glow-lotus: 0 0 40px rgba(192,132,252,0.3), 0 0 80px rgba(192,132,252,0.12);
+
+  /* Spacing */
+  --section-x: clamp(20px, 8vw, 120px);
+}
+
+/* ================================================
+   RESET & BASE
+   ================================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  background: var(--bg-void);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.7;
+  overflow-x: hidden;
+  cursor: none;
+}
+
+/* ================================================
+   SCROLLBAR
+   ================================================ */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg-void); }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, var(--gold), var(--lotus));
+  border-radius: 99px;
+}
+
+/* ================================================
+   SELECTION
+   ================================================ */
+::selection {
+  background: rgba(245, 158, 11, 0.2);
+  color: var(--text-primary);
+}
+
+/* ================================================
+   NOISE TEXTURE — cosmic grain
+   ================================================ */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.25;
+}
+
+/* ================================================
+   UTILITY CLASSES
+   ================================================ */
+
+/* Section wrapper */
+.section-wrap {
+  position: relative;
+  z-index: 2;
+  padding: clamp(80px, 12vh, 140px) var(--section-x);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, var(--gold) 0%, var(--lotus) 50%, var(--aura) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glass panel */
+.glass {
+  background: var(--bg-card);
+  border: 1px solid var(--border-dim);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.glass-hover:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-gold);
+}
+
+/* Sacred button */
+.btn-sacred {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-code);
+  font-size: 0.76rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 15px 36px;
+  border-radius: 100px;
+  background: linear-gradient(135deg, var(--gold), var(--lotus));
+  color: #0a0618;
+  font-weight: 700;
+  border: none;
+  cursor: none;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.3s;
+  box-shadow: 0 0 30px rgba(245,158,11,0.25);
+  text-decoration: none;
+}
+.btn-sacred:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--glow-gold);
+}
+
+/* Ghost button */
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-code);
+  font-size: 0.76rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 15px 36px;
+  border-radius: 100px;
+  border: 1px solid var(--border-gold);
+  color: var(--text-secondary);
+  background: rgba(245,158,11,0.05);
+  cursor: none;
+  transition: color 0.2s, background 0.2s, box-shadow 0.3s;
+  text-decoration: none;
+}
+.btn-ghost:hover {
+  color: var(--text-primary);
+  background: rgba(245,158,11,0.1);
+  box-shadow: var(--glow-gold);
+}
+
+/* Section tag */
+.section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-code);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+.section-tag::before {
+  content: '✦';
+  color: var(--lotus);
+  font-size: 0.65rem;
+}
+.section-tag::after {
+  content: '✦';
+  color: var(--lotus);
+  font-size: 0.65rem;
+}
+
+/* Section title */
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5.5vw, 5rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: 0.02em;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+}
+
+/* Tech badge */
+.tech-badge {
+  font-family: var(--font-code);
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  color: var(--lotus);
+  background: rgba(192,132,252,0.08);
+  border: 1px solid rgba(192,132,252,0.2);
+  padding: 4px 12px;
+  border-radius: 6px;
+}
+
+/* Glow orb */
+.glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ================================================
+   CUSTOM CURSOR
+   ================================================ */
+#cursor-outer,
+#cursor-inner {
+  position: fixed;
+  top: 0; left: 0;
+  z-index: 9999;
+  pointer-events: none;
+  border-radius: 50%;
+}
+#cursor-inner {
+  width: 8px; height: 8px;
+  background: var(--gold);
+  transform: translate(-50%, -50%);
+}
+#cursor-outer {
+  width: 34px; height: 34px;
+  border: 1px solid rgba(245,158,11,0.5);
+  transform: translate(-50%, -50%);
+  transition: width 0.25s, height 0.25s, border-color 0.25s;
+}
+body.cursor-hover #cursor-outer {
+  width: 56px; height: 56px;
+  border-color: var(--gold);
+  background: rgba(245,158,11,0.06);
+}
+
+/* ================================================
+   SACRED GEOMETRY SVG DECORATIONS
+   ================================================ */
+.mandala-ring {
+  animation: spin 30s linear infinite;
+  transform-origin: center;
+}
+.mandala-ring-reverse {
+  animation: spin-reverse 20s linear infinite;
+  transform-origin: center;
+}
+
+/* ================================================
+   FORM INPUTS
+   ================================================ */
+.input-sacred {
+  width: 100%;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border-dim);
+  border-radius: 12px;
+  padding: 14px 18px;
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.25s, box-shadow 0.25s, background 0.25s;
+}
+.input-sacred:focus {
+  border-color: var(--border-gold);
+  box-shadow: 0 0 0 3px rgba(245,158,11,0.1), var(--glow-gold);
+  background: rgba(245,158,11,0.04);
+}
+.input-sacred::placeholder {
+  color: var(--text-muted);
+  font-style: italic;
+}
