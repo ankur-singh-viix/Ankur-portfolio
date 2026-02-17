@@ -33,7 +33,6 @@ export const SKILLS: Skill[] = [
   // { name: 'LangChain',   icon: '🔗',  level: 85, category: 'ai' },
   { name: 'GenAI',       icon: '🤖',  level: 88, category: 'ai' },
   { name: 'Ollama',      icon: '🦙',  level: 78, category: 'ai' },
-  { name: 'RAG Systems', icon: '🧠',  level: 82, category: 'ai' },
 
   // ── Tools ───────────────────────────────────
   { name: 'Git',         icon: '📦',  level: 90, category: 'tools' },

@@ -165,15 +165,15 @@ export default function About() {
           </p>
           <p style={{ color: 'var(--text-secondary)', fontSize: '1.05rem', lineHeight: '1.85', marginBottom: '18px' }}>
             My foundation spans <strong style={{ color: 'var(--text-primary)', fontWeight: 600 }}>
-              C++, Java,Go, Python, JavaScript , Typescript, Algorithms
+              C++, Java,Go , JavaScript , Typescript, Algorithms
             </strong>, and Data Structures — layered with hands-on experience in full-stack
-            development, AI/ML, and generative AI integration.
+            development, and generative AI integration.
           </p>
           <p style={{ color: 'var(--text-secondary)', fontSize: '1.05rem', lineHeight: '1.85', marginBottom: '32px' }}>
             Like the universe unfolding its own design, I believe every problem contains its
             solution within. As an <strong style={{ color: 'var(--text-primary)', fontWeight: 600 }}>
               AI enthusiast, a full-stack developer
-            </strong> and AI builder, I seek to illuminate what's possible at the intersection
+            </strong> and Personal agent builder, I seek to illuminate what's possible at the intersection
             of technology and human potential.
           </p>
 

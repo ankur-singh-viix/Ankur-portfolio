@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Ankur Singh— AI & Full-Stack Developer',
   description:
     'A spiritual journey through code. IIT Guwahati student specializing in AI, Full-Stack Development & Data Science.',
-  keywords: ['AI Developer', 'Full Stack', 'AI', 'Full-Stack Development'],
+  keywords: ['Full Stack', 'AI', 'Full-Stack Development'],
   authors: [{ name: 'Ankur Singh' }],
   openGraph: {
     title: 'Ankur Singh — Portfolio',
