@@ -44,6 +44,16 @@ export const PROJECTS: Project[] = [
     repoLink: 'https://github.com/ankur-singh-viix/Field-_Force-_Tracker_Nodejs',
     accentColor: '#818cf8',
   },
+    {
+    title: 'Group videocalling System',
+    description:
+    'Built a scalable video calling backend using Node.js, WebRTC, and Redis for signaling. Implemented real-time peer-to-peer connections with efficient room management and dynamic scaling to support multiple concurrent users.',
+    tech: ['Node.js', 'WebRTC', 'Redis', 'Socket.IO'],
+    badge: 'Real-Time Communication System',
+    liveLink: '#',        // ✏️ Replace with your live URL
+    repoLink: 'https://github.com/ankur-singh-viix/Video_Calling_App_Backend',        // ✏️ Replace with your GitHub repo URL
+    accentColor: '#f59e0b',
+  },
   // ✏️ ADD MORE PROJECTS BELOW following the same pattern:
   // {
   //   title: 'Your Project',
