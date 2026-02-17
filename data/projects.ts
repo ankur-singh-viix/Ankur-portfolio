@@ -44,7 +44,7 @@ export const PROJECTS: Project[] = [
     repoLink: 'https://github.com/ankur-singh-viix/Field-_Force-_Tracker_Nodejs',
     accentColor: '#818cf8',
   },
-    {
+  {
     title: 'Group videocalling System',
     description:
     'Built a scalable video calling backend using Node.js, WebRTC, and Redis for signaling. Implemented real-time peer-to-peer connections with efficient room management and dynamic scaling to support multiple concurrent users.',
@@ -53,6 +53,16 @@ export const PROJECTS: Project[] = [
     liveLink: '#',        // ✏️ Replace with your live URL
     repoLink: 'https://github.com/ankur-singh-viix/Video_Calling_App_Backend',        // ✏️ Replace with your GitHub repo URL
     accentColor: '#f59e0b',
+  },
+  {
+    title: 'TaskFlow Real-Time Collaboration Platform',
+    description:
+      'Built a full-stack real-time collaboration platform using React and Node.js. Implemented JWT-based authentication, board/list/task management, and live updates using Socket.IO. Designed a scalable REST API with protected routes, role-based access, and optimized state management using Zustand. Deployed frontend and backend separately on Render with environment-based configuration.',
+    tech: ['React', 'Node.js', 'Express', 'Socket.IO', 'SQLite', 'JWT', 'Zustand'],
+    badge: 'Full-Stack Real-Time Application',
+    liveLink: '#',  
+    repoLink: 'https://github.com/ankur-singh-viix/taskflow-real-time-collaboration',
+    accentColor: '#6366f1',
   },
   // ✏️ ADD MORE PROJECTS BELOW following the same pattern:
   // {

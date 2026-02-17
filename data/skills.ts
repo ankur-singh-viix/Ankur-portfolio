@@ -27,6 +27,7 @@ export const SKILLS: Skill[] = [
   { name: 'Go',          icon: '🐹',  level: 75, category: 'backend' },
   { name: 'typescript',    icon: '📘',  level: 82, category: 'backend' },
   { name: 'C++',         icon: '⚙️',  level: 80, category: 'backend' },
+  { name: 'socket.io',    icon: '🔌',  level: 78, category: 'backend' },
 
   // ── AI / ML ─────────────────────────────────
   // { name: 'LangChain',   icon: '🔗',  level: 85, category: 'ai' },
